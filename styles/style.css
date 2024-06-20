@@ -1,0 +1,165 @@
+@import url('https://fonts.cdnfonts.com/css/cartoon-free');
+
+                
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #000;
+    font-family: 'CARTOON FREE', sans-serif;
+    font-size: 24px;  
+    line-height: 1.6; 
+    height: 100vh;                
+}
+
+ul {
+    height: 100px;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    
+}
+
+
+article {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 1em;
+
+    & h1 {
+        position: relative;
+        display: block;
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: #06D85F;
+        text-underline-offset: 10px;
+    }
+    
+}
+
+
+.main {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+.section {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 400px;
+        margin: 10px;
+        background: rgba(255,255,255,0.2);
+        padding: 35px;
+        border: 2px solid #afafaf;
+        border-radius: 0.5em;
+        background-clip: padding-box;
+        text-align: center;
+  
+    &  .section__button {
+        font-size: 1em;
+        padding: 10px;
+        color: #000;
+        border: 2px solid #06D85F;
+        border-radius: 0.5em;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+      }
+
+      &  .section__button:hover {
+        background: #06D85F;
+      }
+      
+
+}
+  
+
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    overflow: scroll;
+  }
+
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .overlay__popup {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .overlay__popup .overlay__h2 {
+    margin-top: 0;
+    color: #333;
+    position: relative;
+    display: block;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #06D85F;
+    text-underline-offset: 20px;
+  }
+
+  .overlay__popup .overlay__close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .overlay__popup .overlay__close:hover {
+    color: #06D85F;
+  }
+  .overlay__popup .overlay__content {
+    max-height: 30%;
+    /* margin-top: 40px; */
+  }
+
+  .overlay__h3 {
+    position: relative;
+    display: block;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #06D85F;
+    text-underline-offset: 20px;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
